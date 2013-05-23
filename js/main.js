@@ -1,6 +1,6 @@
 var callBackContactFunction='';
 
-function DetailController($scope, $rootScope, $routeParams)
+function DetailController($scope, $rootScope, $routeParams, $location)
 {
 	clearAllMenu()
 	$('#menu-detail').addClass('active');
@@ -38,12 +38,7 @@ function DetailController($scope, $rootScope, $routeParams)
 
 	$scope.callRegist = function()
 	{
-		callBackContactFunction = function(){
-			setTimeout(function(){
-				$('#regist-btn').click();
-			}, 100)
-			
-		}
+		$location.path('/contact');
 	}
 
 	$scope.selectGame(0);
@@ -53,7 +48,8 @@ function DetailController($scope, $rootScope, $routeParams)
 function HomeController($scope, $rootScope, $routeParams)
 {
 	clearAllMenu()
-	$('#menu-logo').addClass('active')
+	$('#menu-logo').addClass('active');
+	callBackContactFunction  = '';
 	doJqInit(function(){
 		console.log('start')
 		console.log($('.detail a'));
@@ -73,6 +69,16 @@ function HomeController($scope, $rootScope, $routeParams)
 		})
 
 	});
+
+	$scope.callInfo = function()
+	{
+		callBackContactFunction = function(){
+			setTimeout(function(){
+				$('#contact-btn').click();
+			}, 100)
+			
+		}
+	}
 	
 }
 

@@ -1,6 +1,6 @@
 <section id="home-page"  ng-controller="HomeController">
 	<div class="pn-page gray" >
-		<a href="#/detail"><img src="img/detail-cover.png"/></a>
+		<a href="#/detail"><img src="img/first-cover.png"/></a>
 	</div>
 
 	<div class="row detail">
@@ -18,7 +18,7 @@
 		</div>
 		<div class="span4 ">
 			<div class="pn-page green" id="target-contact">
-				<a href="#/contact"><img src="img/first-contact.png" target="#target-contact" /></a>
+				<a ng-click="callInfo()" href="#/contact"><img src="img/first-contact.png" target="#target-contact" /></a>
 			</div>
 		</div>
 	</div>
