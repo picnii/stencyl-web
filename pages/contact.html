@@ -1,0 +1,64 @@
+<section id="contact-page"  ng-controller="ContactController">
+	<div class="pn-page">
+		<div class="cover">
+
+		</div>
+		<div class="row pn-row">
+			<div class="span8 fix">
+				<div class="inner" style="padding:5px;">
+					<h4>ขั้นตอนการสมัครเรียน</h4>
+					<ol>
+						<li><a href="#" id="regist-btn" class="btn btn-danger btn-large">ขอรับใบสมัคร</a></li>
+						<li>ส่งใบสมัครไปที่ <span class="email">contact@picnii.me</span> หรือ ไปรษณีย์ 1010 ถนน สุทธิสาร เขตดินแดง แขวงดินแดง กรุงเทพ 10400</li>
+						<li>ชำระค่าเรียนด้วยการโอนเงินเข้า <br/>
+							<p class="account">บัญชี บริษัทปิกนี่ จำกัด ธนาคารไทยพาณิชย์ เลขที่บัญชี <strong>021-260842-4</strong> สาขา สุทธิสาร</p> </li>
+						<li>แจ้งการชำระเงินผ่านทาง <a href="http://facebook.com/picnii" target="_blank">Facebook</a> หรือ ทางโทรศัพท์ <span class="phone">0824523991</span> </li>
+						<li>ทีมงานติดต่อกลับเพื่อยืนยันการสมัคร</li>
+					</ol>
+				</div>
+			</div>
+			<div class="span4 fix">
+				<div class="inner">
+					<img src="img/phone.png" /> <span class="contact">0824523991</span><br/>
+					<a href="http://facebook.com/picnii"><img src="img/facebook.png" /> <span class="contact">facebook.com/picnii</span></a><br/>
+					<img src="img/gmail.png" /> <span class="contact" style="color:#C44D58;">contact@picnii.me</span><br/>
+					<div style="text-align:center;">
+						<button id="contact-btn" ng-click="showForm()" class="btn btn-primary btn-large">ติดต่อผ่านฟอร์มออนไลน์</button>
+					</div>
+				</div>
+				
+			</div>
+
+		</div>
+
+		
+		
+	</div>
+
+</section>
+<div id="myContact" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	 <form>
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">แบบฟอร์มติดต่อ</h3>
+  </div>
+  <div class="modal-body">
+    
+		<label>ชื่อ</label>
+		<input type="text" placeholder="ชื่อ"/>
+		<label>อีเมล</label>
+		<input type="text" placeholder="อีเมล"/>
+		<label>เบอร์โทร</label>
+		<input type="text" placeholder="เบอร์โทร"/>
+		<label>ข้อความ</label>
+		<textarea placeholder="ข้อความ"></textarea><br/>
+		
+	
+  </div>
+  <div class="modal-footer">
+  	<input type="submit" value="ส่งข้อความ" class="btn btn-success"/>
+    <button class="btn btn-danger" data-dismiss="modal" aria-hidden="true">ยกเลิก</button>
+    
+  </div>
+  </form>
+</div>

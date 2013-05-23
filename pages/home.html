@@ -1,0 +1,191 @@
+<section id="detail-page" ng-controller="DetailController">
+
+	<article class="pn-page" >
+		<div class="pn-row cover gray">
+			<img src="img/detail-cover.png" />
+		</div>
+
+		<div class="row pn-row ">
+			<div class="span3">
+				<div class="inner">
+					<img src="img/stencyl-what.png"  />
+				</div>
+			</div>
+			<div class="span9">
+				<div class="inner">
+					<h2>Stencyl คืออะไร?</h2>
+					<p>คือเครื่องมือในการพัฒนาเกมที่ใช้งานง่ายและเหมาะกับเด็กไปจนถึงบุคคลทั่วไป โดยเกมที่ได้มา จะเป็นแฟลชเกม ซึ่งสามารถนำไปใช้ได้ตามเว็บไซต์ หากติดตั้งเวอร์ชั่นเต็มจะสามารถทำเกมลงมือถือได้ทั้ง Android และ iOS</p>
+					<div style="text-align:right">
+						<a target="_blank" href="http://www.stencyl.com/stencyl/get/" class="btn btn-primary">Download</a> <a href="http://stencyl.com" target="_blank" class="btn btn-info">เรียนรู้เพิ่มเติม</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row pn-row ">
+			<div class="span3">
+				<div class="inner">
+					<img src="img/detail-stencyl.jpg"  class="img-polaroid"/>
+				</div>
+			</div>
+			<div class="span9">
+				<div class="inner">
+					
+					<h2>เนื้อหาที่เรียน</h2>
+					<ul>
+						<li>Concept ของ ฉาก ตัวละคร และการใช้ พฤติกรรมของ Stencyl</li>
+						<li>การสร้างฉาก และ ตัวละคร</li>
+						<li>การใช้ทรัพยากรต่างๆจาก Stencyl Forge</li>
+						<li>การใช้พฤติกรรม(Behavior) ต่างๆ</li>
+						<li>การสร้าง AI อย่างง่าย</li>
+						<li>การใช้Keyboard, Mouse เป็น Input</li>
+						<li>เข้าใจแนวคิดของการใช้ ตัวแปร(variable), เงื่อนไข(condition) และเหตุการณ์(event) ที่เป็นจุดสำคัญที่ทำให้ต่อยอดได้ในการเขียนโปรแกรม</li>
+						<li>เรียนรู้วิธีการสร้างเกมแนว Platformer, Catapult, SpaceShooter, Racing</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+	</article>
+
+	<h2 style="color:black;">ตัวอย่างแนวเกมที่ผู้เรียนจะได้สร้าง</h2>
+	<article class="pn-page" >
+		<div class="game-area pn-row">
+			
+			<div class="game-zone">
+				<div class="game" >
+					<div id="gameContent" ></div>
+				</div>
+			</div>
+		</div>
+		<div class=" pn-row">
+
+			<div >
+				<div class="gray"  ng-repeat="game in games" style="display:inline-block;margin-right:7px;margin-left:7px;">
+					<input type="image" ng-click="selectGame(game.index)" ng-src="{{game.img}}"  class="img-polaroid" style="width:210px" ng-class="getChosenClass(game.index)" />
+				</div>
+			</div>
+			
+		</div>
+	</article>
+
+	<article class="pn-page" style="padding-top:0px;" >
+		<div class="cover green" style="border-right-top-radius:10px;border-left-top-radius:10px;">
+			
+				<img src="img/detail-whypicnii.png" />
+
+		</div>
+		<div style="padding-bottom:15px;"></div>
+		<div class="row">
+			<div class="span6">
+				<div class="row">
+					<div class="span3">
+						<div class="inner">
+							<a href="http://www.se-edlearning.com/day-camp/stencyl" target="_blank"><img class="img-polaroid" src="img/detail-xpe.jpg" style="width:230px;"></img></a>
+						</div>
+					</div>
+					<div class="span3">
+						<div class="inner content">
+							<h4>ทีมงานมีประสบการณ์</h4>
+							
+							<p>ทีมงานของเราเป็นผู้มีประสบการณ์สอนจากอบรมทั้งระดับผู้ใหญ่และระดับเยาวชน อีกทั้งยังเป็นทีมงานจากหลักสูตร <a href="http://www.se-edlearning.com/day-camp/stencyl" target="_blank">นักสร้างเกมคอมพิวเตอร์ ของ SE-ED</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="span6">
+				<div class="row">
+					<div class="span3">
+						<div class="inner">
+							<img class="img-polaroid" src="img/detail-portfolio.jpg" style="width:230px;"></img>
+						</div>
+					</div>
+					<div class="span3">
+						<div class="inner content">
+							<h4>ผู้เรียนมีผลงานออนไลน์</h4>
+							<p>เมื่อผู้เรียนทุกคนสร้างเกมสำเร็จ จะสามารถอัพโหลดผลงานของตนไว้ออนไลน์ได้ <a href="http://picnii.me/game/gario" target="_blank">ตัวอย่างผลงานออนไลน์ของผู้เรียน</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="span6">
+				<div class="row">
+					<div class="span3">
+						<div class="inner">
+							<a href="https://docs.google.com/a/picnii.me/file/d/0B73FQGOS5f5ZcUJGYXFWNktfbTQ/preview?pli=1" target="_blank">
+								<img class="img-polaroid" src="img/detail-video.png" ></img>
+							</a>
+						</div>
+					</div>
+					<div class="span3">
+						<div class="inner content">
+							<h4>เรียนซ้ำได้ทางวิดีโอ</h4>
+							<p>เมือผู้เรียนต้องการจะทบทวน ผู้เรียนสามารถทบทวนได้ทางวิดีโอตลอดเวลาผ่านทางระบบของเรา ดูตัวอย่าง
+							<a href="https://docs.google.com/a/picnii.me/file/d/0B73FQGOS5f5ZcUJGYXFWNktfbTQ/preview?pli=1" target="_blank">สร้างเกมจาก Stencyl ได้ใน 10 นาที</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="span6">
+				<div class="row">
+					<div class="span3">
+						<div class="inner">
+							<img class="img-polaroid" src="img/detail-sale.png" ></img>
+						</div>
+					</div>
+					<div class="span3">
+						<div class="inner content">
+							<h4>เรียนหลักสูตรอื่นๆมีส่วนลด</h4>
+							
+							<p>ผู้ที่เคยเรียนกับเราเมื่อเรียนซ้ำจะได้ส่วนลดจากปกติ 10% โดยสามารถติดตามหลักสูตรอื่นๆได้ทาง <a href="http://facebook.com/picnii" target="_blank">Facebook ของเรา</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</article>
+	<article class="pn-page red" style="padding-top:0px;padding-bottom:0px;">
+		<div class="row">
+			<div class="span4">
+				<div class="inner" style="padding-top:4px;padding-bottom:4px;">
+					<img src="img/detail-interest.png"/>
+				</div>
+			</div>
+			<div class="span8 white" style="border-top-right-radius: 5px;border-bottom-right-radius: 5px;">
+				<div class="inner" style="padding-top:4px;padding-bottom:4px;">
+					<h3>ใครเรียนได้บ้าง?</h3>
+					<p>สำหรับผู้ที่สนใจต้องกำลังศึกษาอยู่ในระดับชั้นประถมศึกษา 4 (ป.4) เป็นต้นไป (อายุมากกว่าได้ไม่ว่ากัน)</p>
+					<h3>เรียนที่ไหน?</h3>
+
+					<p>เรียนที่ สำนักบริการคอมพิวเตอร์ มหาวิทยาลัยเกษตรศาสตร์วิทยาเขต บางเขน <a href="https://maps.google.com/maps?q=%E0%B8%AA%E0%B8%B3%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%84%E0%B8%AD%E0%B8%A1%E0%B8%9E%E0%B8%B4%E0%B8%A7%E0%B9%80%E0%B8%95%E0%B8%AD%E0%B8%A3%E0%B9%8C&hl=en&ie=UTF8&sll=37.0625,-95.677068&sspn=57.553742,79.013672&oq=%E0%B8%A1+%E0%B9%80%E0%B8%81%E0%B8%A9&hq=%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%A7%E0%B8%B4%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%A5%E0%B8%B1%E0%B8%A2%E0%B9%80%E0%B8%81%E0%B8%A9%E0%B8%95%E0%B8%A3%E0%B8%A8%E0%B8%B2%E0%B8%AA%E0%B8%95%E0%B8%A3%E0%B9%8C+%E0%B9%81%E0%B8%82%E0%B8%A7%E0%B8%87+%E0%B8%A5%E0%B8%B2%E0%B8%94%E0%B8%A2%E0%B8%B2%E0%B8%A7+%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%9E%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%99%E0%B8%84%E0%B8%A3+%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%97%E0%B8%A8%E0%B9%84%E0%B8%97%E0%B8%A2&t=m&cid=3282130031365979395&z=19&iwloc=A" target="_blank">(แผนที่)</a><br/>
+
+						
+					</p>
+					<h3>เรียนเวลาอะไร?</h3>
+						<p>
+							<strong>ทุกวันเสาร์</strong> ตั้งแต่เวลา 9.00 - 12.00 เป็นเวลา 8 ครั้ง(24 ชั่วโมง) ตั้งแต่วันที่ 22 มิถุนายน 2556 เป็นต้นไป 
+						</p>
+					<h3>ค่าใช้จ่ายเท่าไหร่?</h3>
+						<p>
+							อัตราปรกติ คนละ 5900 บาท(245 บาท:ชั่วโมง) <br/>สำหรับผู้ที่เคยเรียน<a href="http://www.se-edlearning.com/day-camp/stencyl" target="_blank">นักสร้างเกมคอมพิวเตอร์ ของ SE-ED</a> ลดเหลือ 5310 บาท(221 บาท:ชั่วโมง)
+						</p>
+
+					<div style="text-align:center">
+						<a href="#/contact" ng-click="callRegist()" class="btn  btn-success">ขอรับใบสมัคร</a> 
+						<a href="#/contact" ng-click="callInfo()" class="btn  btn-danger">สอบถามข้อมูลเพิ่มเติม</a>
+
+					</div>
+
+				</div>
+				
+			</div>
+		</div>
+		
+	</article>
+</section>

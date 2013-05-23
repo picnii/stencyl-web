@@ -1,0 +1,246 @@
+#detail-page .game
+{
+	border:10px solid black;
+	border-radius:5px;
+	width:640px;
+	margin-left: auto;
+	margin-right: auto;	
+}
+
+#detail-page .game-zone
+{
+	background-color:#333;
+}
+
+#detail-page .pn-page, #why-page .pn-page
+{
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+#detail-page .pn-page:first-child, #detail-page .pn-page:nth-child(3), #why-page .pn-page:first-child
+{
+	padding-top:0px;
+}
+
+#detail-page .pn-page:nth-child(3), #detail-page .game-area, #detail-page .game-zone
+{
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+}
+
+#detail-page .pn-page:first-child .cover, #why-page .main .cover , #detail-page .pn-page:nth-child(4), #detail-page .pn-page:nth-child(4) .cover
+{
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+
+
+#detail-page .pn-page .inner,  #why-page .pn-page > .inner
+{
+	padding-left:4px;	
+	padding-right:4px;
+}
+
+#detail-page .pn-page .row .row .inner
+{
+	padding-bottom: 15px;
+}
+
+#detail-page .pn-page .content.inner
+{
+	padding-left:0px;	
+}
+
+
+#detail-page .pn-page, #why-page .pn-page
+{
+	margin-bottom: 20px;
+}
+
+#detail-page .game-area
+{
+	position: relative;
+}
+
+.pn-page
+{
+	padding:4px;
+	border-radius:10px;
+	background: white;
+	box-shadow:0px 0px 10px rgba(0,0,0,0.5);
+}
+
+body
+{
+
+	background-color:#4ECDC4;
+}
+
+#main-menu ul
+{
+	list-style: none;
+	float:right;
+	margin-top: 20px;
+}
+
+#main-menu .inner h1
+{
+	float:left;
+	color:white;
+	text-shadow:0px 0px 10px rgba(0,0,0,0.5);
+}
+
+#main-menu  ul > li
+{
+	float:left;
+	display:inline-block;
+	padding:5px;
+}
+
+#main-menu  ul > li.active a
+{
+	color:#556270;
+	font-weight: bold;
+	padding:5px;
+	background:#C7F464;
+}
+
+#main-menu  ul > li a, #main-menu h1 a
+{
+	color:#C7F464;
+}
+
+#main-menu h1 a:hover
+{
+	text-decoration: none;
+}
+
+#main-menu  .inner
+{
+	padding-bottom:20px;
+	padding-top:20px;
+}
+
+#home-page .detail
+{
+	margin-top:15px;
+}
+
+#home-page .detail .pn-page
+{
+	min-height:150px;
+}
+
+#why-page .main .cover, .pn-page > .cover
+{
+	text-align: center;
+
+}
+
+.pn-page > .cover
+{
+	margin-top: 5px
+}
+
+.pn-page > .pn-row
+{
+	margin-bottom: 5px;
+}
+
+div.white
+{
+	background: white;
+}
+
+div.red, article.red
+{
+	background: #C44D58;
+}
+
+div.green, article.green
+{
+	background:#C7F464;
+}
+
+div.lightred, article.lightred
+{
+	background: #FF6B6B;
+}
+
+div.aqua
+{
+	background: #4ECDC4;
+}
+
+div.gray, article.gray
+{
+	background: #556270;
+}
+
+.row.pn-row
+{
+	margin-left:-17px;
+}
+
+.row.pn-row > [class*="span"]
+{
+	margin-left:17px;
+}
+
+.row.pn-row > [class*="span"].fix
+{
+	margin-left:14px;
+}
+
+img.chosen, input.chosen
+{
+	opacity: 0.5;
+}
+
+div#menu-logo
+{
+	width:346px;
+	height: 75px;
+	float:left;
+	background-image: url('../img/logo2.png');
+}
+
+div#menu-logo.active
+{
+	background-image: url('../img/logo.png');
+}
+
+.article-img-header
+{
+	text-align: center;;
+}
+
+#myContact input[type=text]
+{
+	height: 25px;
+	width: 100%;
+}
+
+#myContact textarea
+{
+	width: 100%;
+}
+
+span.contact
+{
+	font-size:26px;
+}
+
+span.email
+{
+	color:#C44D58;
+}
+
+.account
+{
+	padding:5px;
+	background-color:#556270;
+	color:#C7F464; 
+}
